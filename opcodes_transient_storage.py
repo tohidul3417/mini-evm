@@ -10,7 +10,7 @@ def tload(evm):
 
 def tstore(evm):
     key, value = evm.stack.pop(), evm.stack.pop()
-    evm.storag.store(key, value)
+    evm.storage.store(key, value)
     evm.gas_dec(100)
     evm.pc += 1
 
